@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LegoMiniFigure.Composition.Legs
 {
-    internal class AstronuatLegs
+    class AstronautLegs
     {
         public bool HasPants { get; set; }
         public ShoeType Shoes { get; set; }
@@ -24,7 +24,7 @@ namespace LegoMiniFigure.Composition.Legs
         }
     }
 
-    internal enum ShopType
+    enum ShoeType
     {
         None,
         Boots,

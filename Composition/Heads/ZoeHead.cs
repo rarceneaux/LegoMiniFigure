@@ -26,7 +26,7 @@ namespace LegoMiniFigure.Composition.Heads
         }
     }
 
-    internal enum LegoColor
+    enum LegoColor
     {
         Yellow,
         Red,
