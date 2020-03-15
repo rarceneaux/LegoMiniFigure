@@ -30,14 +30,14 @@ namespace LegoMiniFigure
         //Public Property with a private setter
         public string Job { get; private set; }
         public string OxygenLevel { private get; set; }
-        public AstronautTorso Torso { get; set; }
+        public TorsoBase Torso { get; set; }
         public AstronautLegs Legs { get; set; }
         public ZoeHead Head { get; set; }
 
 
         /*this is an Constructor have to have the same name as the class, if you have parameters on it it must have them in program.cs when making copy */
          public Astronaut(string name, string job,
-             ZoeHead head, AstronautTorso torso, 
+             ZoeHead head, TorsoBase torso, 
              AstronautLegs legs)
         {
             Name = name;
@@ -55,10 +55,10 @@ namespace LegoMiniFigure
         public void DoYourJob(int stepsToWalk)
         {
             Console.WriteLine($"{Name} Doing all my {Job} duties...");
-            Legs.Walk(15);
+            Legs.Walk(stepsToWalk);
             Head.EatPie("Cherry");
             Torso.Flex();
-            Legs.Walk(10);
+            Legs.Walk(stepsToWalk);
         }
     }
 }
